@@ -1,0 +1,92 @@
+.popup {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    background: #fff8dc;
+    border: 1px solid #ccc;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 600px;
+    animation: slideIn 0.4s ease;
+    align-items: center;
+    font-size: 20px;
+}
+
+.popup button {
+    background-color: var(--theme-color);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.combo-link {
+    color: #b09a3b;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.combo-link:hover {
+    color: #d84315;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1050px) {
+    .popup {
+        bottom: 50px;
+        right: 40px;
+        max-width: 500px;
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .popup button {
+        padding: 6px 10px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .popup {
+        bottom: 40px;
+        right: 30px;
+        max-width: 400px;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .popup button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .popup {
+        bottom: 20px;
+        right: 15px;
+        max-width: 90%;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .popup button {
+        padding: 5px 8px;
+        font-size: 0.85rem;
+    }
+}

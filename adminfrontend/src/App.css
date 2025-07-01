@@ -1,0 +1,22 @@
+.app-content {
+    display: flex;
+}
+
+@media (max-width: 1050px) {
+    .app-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 720px) {
+    .app-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 470px) {
+    .app-content {
+        flex-direction: column;
+    }
+}

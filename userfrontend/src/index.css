@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --theme-color: #ebd469;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.app {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@media (max-width: 1050px) {
+    html {
+        font-size: 60%;
+    }
+
+    .app {
+        width: 90%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 58%;
+    }
+
+    .app {
+        width: 92%;
+    }
+}
+
+@media (max-width: 470px) {
+    html {
+        font-size: 56%;
+    }
+
+    .app {
+        width: 95%;
+    }
+}

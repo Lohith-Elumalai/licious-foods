@@ -1,0 +1,87 @@
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #a9a9a9;
+    border-top: 0;
+    border-bottom: 0;
+    font-size: max(1vw, 1rem);
+}
+
+.sidebar-options {
+    padding-top: 50px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 8px 10px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+}
+
+.sidebar-option.active {
+    background-color: #f2f4ff;
+    border-color: var(--theme-color);
+}
+
+@media (max-width: 1050px) {
+    .sidebar {
+        width: 22%;
+        font-size: 0.95rem;
+    }
+
+    .sidebar-options {
+        padding-left: 15%;
+        gap: 18px;
+    }
+
+    .sidebar-option {
+        gap: 10px;
+        padding: 7px 9px;
+    }
+}
+
+@media (max-width: 720px) {
+    .sidebar {
+        width: 25%;
+        font-size: 0.9rem;
+    }
+
+    .sidebar-options {
+        padding-left: 12%;
+        gap: 16px;
+    }
+
+    .sidebar-option {
+        gap: 8px;
+        padding: 6px 8px;
+    }
+
+    .sidebar-option p {
+        display: none;
+    }
+}
+
+@media (max-width: 470px) {
+    .sidebar {
+        width: 30%;
+        font-size: 0.85rem;
+    }
+
+    .sidebar-options {
+        padding-left: 10%;
+        gap: 14px;
+    }
+
+    .sidebar-option {
+        gap: 6px;
+        padding: 5px 7px;
+    }
+}

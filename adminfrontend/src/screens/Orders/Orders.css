@@ -1,0 +1,80 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid var(--theme-color);
+    padding: 20px;
+    margin-block: 30px;
+    font-size: 1.4rem;
+    color: #505050;
+    background-color: white;
+    border-radius: 6px;
+    word-break: break-word;
+}
+
+.order-item > * {
+    min-width: 0; 
+}
+
+.order-item-food,
+.order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.order-item-address {
+    margin-bottom: 10px;
+}
+
+.order-item-select {
+    background-color: #ffe8e4;
+    border: 1px solid var(--theme-color);
+    padding: 10px;
+    width: max(11vw, 120px);
+    outline: none;
+}
+
+
+@media (max-width: 1050px) {
+    .order-item {
+        grid-template-columns: 0.6fr 2fr 1fr 1fr 1fr;
+        font-size: 1.3rem;
+        gap: 25px;
+        padding: 18px;
+    }
+}
+
+
+@media (max-width: 720px) {
+    .order-item {
+        grid-template-columns: 0.6fr 2fr 1fr;
+        font-size: 1.2rem;
+        gap: 20px;
+        padding: 16px;
+    }
+}
+
+
+@media (max-width: 470px) {
+    .order-item {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+
+    .order-item-select {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .order-item-name {
+        margin-top: 0;
+    }
+}
