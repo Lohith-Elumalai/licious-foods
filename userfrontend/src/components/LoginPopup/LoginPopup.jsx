@@ -44,7 +44,7 @@ const LoginPopup = ({ setShowLogin }) => {
         setShowLogin(false);
       }
     } catch (error) {
-      console.log(error.response.data.message);
+      console.log(error.response.data.message+"hi");
       toast.error(error.response.data.message);
     }
   };
