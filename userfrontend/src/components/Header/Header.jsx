@@ -20,23 +20,30 @@ const Header = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 4000); // Change image every 4 seconds
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const handleViewMenuClick = () => {
+    const element = document.getElementById('explore-menu');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
-    <h2 className='h2h'>Order your favourite food here</h2>
-    <div
-      className='header'
-      style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-    >
-      <div className='header-contents'>
-        <button>View Menu</button>
+      <h2 className='h2h'>Order your favourite food here</h2>
+      <div
+        className='header'
+        style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+      >
+        <div className='header-contents'>
+          <button onClick={handleViewMenuClick}>View Menu</button>
+        </div>
       </div>
-    </div></>
-    
+    </>
   );
 };
 
