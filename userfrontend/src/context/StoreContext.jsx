@@ -5,7 +5,7 @@ export const StoreContext = createContext();
 const StoreContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   const [food_list, setFoodList] = useState([]);
-  const url = "http://localhost:4000";
+  const url = "https://licious-foods-backend.onrender.com";
   const [token, setToken] = useState("");
   const [discountPercent, setDiscountPercent] = useState(0);
 
