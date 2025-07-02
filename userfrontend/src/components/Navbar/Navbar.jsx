@@ -16,7 +16,8 @@ const Navbar = ({ showLogin, setShowLogin }) => {
         navigate('/');
     }
 
-    const isCartPage = location.pathname === '/cart' || location.pathname === '/myorders';
+    const isCartPage = location.pathname === '/cart' || location.pathname === '/myorders' || location.pathname === '/features';
+    const isFeaturesPage = location.pathname === '/features' ;
 
     return (
         <div className='navbar'>
@@ -36,6 +37,13 @@ const Navbar = ({ showLogin, setShowLogin }) => {
                 <a href="#footer">
                     <li onClick={() => setMenu('contact')} className={menu === 'contact' ? 'active' : ''}>Contact us</li>
                 </a>
+
+                <Link to="/features" onClick={() => setMenu('features')} className={menu === 'features' ? 'active' : ''}>
+                Features
+                </Link>
+
+
+                
             </ul>
 
             <div className="navbar-right">

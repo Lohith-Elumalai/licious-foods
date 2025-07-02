@@ -9,6 +9,7 @@ import LoginPopup from './components/LoginPopup/LoginPopup'
 import {ToastContainer} from 'react-toastify'
 import Verify from './screens/Verify/Verify'
 import MyOrders from './screens/MyOrders/MyOrders'
+import Features from './screens/Features/Features'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/order" element={<Order />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/myorders" element={<MyOrders />} />
+          <Route path="/features" element={<Features />} />
 
         </Routes>
     </div>
