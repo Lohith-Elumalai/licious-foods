@@ -1,3 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .screen {
   width: 100%;
   display: flex;
@@ -5,7 +18,7 @@
   margin-block: 30px;
   color: #333;
   font-size: 1.5rem;
-  padding:10px;
+  padding: 10px;
 }
 
 .container {
@@ -52,7 +65,6 @@ form.flex-col {
 .add-product-description textarea {
   resize: vertical;
 }
-
 
 .add-btn {
   align-self: center;
@@ -115,10 +127,12 @@ form.flex-col {
   .screen {
     font-size: 1.1rem;
     margin-block: 20px;
+    padding: 10px;
   }
 
   .container {
     padding: 15px;
+    width: 100%;
   }
 
   .add-img-upload img {
@@ -137,5 +151,38 @@ form.flex-col {
   .add-category select {
     padding: 10px;
     font-size: 0.95rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .screen {
+    font-size: 0.95rem;
+    margin-block: 15px;
+    padding: 8px;
+  }
+
+  .container {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .add-img-upload img {
+    width: 65px;
+    height: 55px;
+  }
+
+  .add-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .add-product-name input,
+  .add-product-description textarea,
+  .add-price input,
+  .add-category select {
+    padding: 8px;
+    font-size: 0.9rem;
+    width: 100%;
   }
 }
